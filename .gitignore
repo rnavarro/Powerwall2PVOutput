@@ -62,4 +62,8 @@ ENV/
 env.bak/
 venv.bak/
 
+# PyCharm
+.idea
+
 PW_Config.py
+pvo.log
