@@ -67,14 +67,14 @@ while True:
             pvTime = pwdate.strftime("%H:%M")
             pvoutz = Hlp.Connection(Cfg.pvo_key, Cfg.pvo_systemid, Cfg.pvo_host)
             if Cfg.extData is True:
-                # pvoutz.add_status(pvDate, pvTime, power_exp=pvGeneration, power_imp=pvConsumption, temp=pvTemp, vdc=pvVoltage, battery_flow=pvBatteryFlow, load_power=pvLoadPower, soc=pvSOC, site_power=pvSitePower, load_voltage=pvLoadVoltage, ext_power_exp=pvPower)
+                pvoutz.add_status(pvDate, pvTime, power_exp=pvGeneration, power_imp=pvConsumption, temp=pvTemp, vdc=pvVoltage, battery_flow=pvBatteryFlow, load_power=pvLoadPower, soc=pvSOC, site_power=pvSitePower, load_voltage=pvLoadVoltage, ext_power_exp=pvPower)
                 std_out = "Date: " + str(pvDate) + " Time: " + str(pvTime) + " Generation Power: " + str(
                     pvPower) + " Load Power: " + str(pvLoadPower) + " SOC: " + str(pvSOC) + " Site Power: " + str(
                     pvSitePower) + " Load Voltage: " + str(pvLoadVoltage) + " Battery Flow: " + str(
                     pvBatteryFlow) + " Temp: " + str(pvTemp) + " Solar Voltage: " + str(pvVoltage)
                 logger.info(std_out)
             else:
-                # pvoutz.add_status(pvDate, pvTime, power_exp=pvGeneration, power_imp=pvConsumption, temp=pvTemp, vdc=pvVoltage)
+                pvoutz.add_status(pvDate, pvTime, power_exp=pvGeneration, power_imp=pvConsumption, temp=pvTemp, vdc=pvVoltage)
                 std_out = "Date: " + str(pvDate) + " Time: " + str(pvTime) + " Generation Power: " + str(
                     pvPower) + " Solar Voltage: " + str(pvVoltage)
                 logger.info(std_out)
